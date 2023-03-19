@@ -27,3 +27,4 @@ unzip acp5x-ucm-files-main.zip
 cd acp5x-ucm-files-main
 sudo bash install.sh
 REBOOT
+OBS: Needs kernel 6.1+
