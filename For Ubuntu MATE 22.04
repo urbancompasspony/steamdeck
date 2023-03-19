@@ -1,0 +1,20 @@
+# crontab @reboot
+touchscreen script
+
+# auto-login
+to prevent a problem of screen on portrait mode
+
+# Set DPI to
+120
+
+# Install
+GNOME-SYSTEM-UTILITIES
+to adjust users and groups GUI
+
+# Set BARS SIZE to
+40
+
+# Set auto-start for
+STEAM
+
+# 
