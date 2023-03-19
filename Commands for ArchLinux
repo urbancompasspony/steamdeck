@@ -1,0 +1,19 @@
+# For SteamOS 3.0 based on ArchLinux
+# Based on:
+# https://crocidb.com/post/investigating-touchscreen-issue-steam-deck/
+
+# To unlock the system:
+
+# Set a password:
+$ passwd
+
+# Disable read-only:
+$ sudo steamos-readonly disable
+
+# initialize and populate package manager:
+$ sudo pacman-key --init
+$ sudo pacman-key --populate archlinux
+$ sudo pacman -Syu
+
+# Install desired package with:
+$ sudo pacman -S PACKAGE_NAME
