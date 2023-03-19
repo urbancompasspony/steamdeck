@@ -26,3 +26,4 @@ wget https://gitlab.com/open-sd/acp5x-ucm-files/-/archive/main/acp5x-ucm-files-m
 unzip acp5x-ucm-files-main.zip
 cd acp5x-ucm-files-main
 sudo bash install.sh
+REBOOT
