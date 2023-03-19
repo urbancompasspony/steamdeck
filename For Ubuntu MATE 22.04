@@ -20,3 +20,9 @@ STEAM
 # Add to /etc/lightdm/lightdm.conf.d/90-arctica-greeter.conf this line:
 autologin-user=MYUSER
 if password was set on install
+
+# For Audio:
+wget https://gitlab.com/open-sd/acp5x-ucm-files/-/archive/main/acp5x-ucm-files-main.zip
+unzip acp5x-ucm-files-main.zip
+cd acp5x-ucm-files-main
+sudo bash install.sh
