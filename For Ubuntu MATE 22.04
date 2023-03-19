@@ -17,4 +17,6 @@ to adjust users and groups GUI
 # Set auto-start for
 STEAM
 
-# 
+# Add to /etc/lightdm/lightdm.conf.d/90-arctica-greeter.conf this line:
+autologin-user=MYUSER
+if password was set on install
