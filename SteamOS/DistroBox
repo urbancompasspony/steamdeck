@@ -21,3 +21,7 @@ For KVM:
 distrobox create ubuntu --volume /dev/kvm:/dev/kvm --image docker.io/library/ubuntu:22.04
 Inside:
 qemu-kvm qemu-guest-agent libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf dnsmasq docker.io
+
+sudo service dbus start
+libvirtd &
+virt-manager
