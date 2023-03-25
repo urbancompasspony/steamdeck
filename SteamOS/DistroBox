@@ -1,27 +1,21 @@
 The better way to have everything, even VM!
 
-pass this to containerL
-/dev/kvm
-
-FROM:
-https://www.gamingonlinux.com/2022/09/distrobox-can-open-up-the-steam-deck-to-a-whole-new-world/
+On SteamOS Konsole:
 
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/extras/install-podman | sh -s -- --prefix ~/.local
 xhost +si:localuser:$USER
 
-TO BASHRC:
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/podman/bin:$PATH
 
 distrobox create ubuntu --image docker.io/library/ubuntu:22.04
 distrobox enter ubuntu
 
-For KVM:
 distrobox create ubuntu --volume /dev/kvm:/dev/kvm --image docker.io/library/ubuntu:22.04
-Inside:
-qemu-kvm qemu-system qemu-guest-agent libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf dnsmasq docker.io
 
+Inside Distrobox System:
+sudo apt install qemu-kvm qemu-system qemu-guest-agent libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf dnsmasq docker.io
 sudo service dbus start
 libvirtd -d
 virt-manager
