@@ -1,0 +1,48 @@
+DEPRECATED, since Plasma has a auto-mount daemon on settings to mount every external device, USBs or even SDCards. Just mark to
+automount even not known ones.
+
+MANUALLY:
+
+
+You could do a simple sudo mount /dev/sdXY /path/to/folder, but again that's not going to stay through reboots so we're going to automate it on boot or command.
+
+Type sudo nano /etc/fstab (or vim if you're a chad) and DO NOT EDIT ANY LINES!
+
+Make a new entry at the bottom, probably a good idea to make a comment so you know what drive it is (comment by putting a # on the line above the entry, anything after that is treated as a comment for human readability and nothing more)
+
+Format it like this: UUID=[string] /full/path/to/mount-point [fstype] defaults,nofail 0 0 (VERY important that you do 'nofail' for USBs, prevents the OS from freaking out if it's not plugged in on boot. Edit: Also important to include "defaults", should make it automount similar to the SD card (no need to use commands or reboot))
+
+Quadrouple check that you got it right (again, do NOT forget nofail)
+
+CTRL+S, CTRL+X to save and exit from nano, vim users are either trapped or know their way out.
+
+Type sudo mount -av to verify that it mounts correctly (-a mounts all drive in fstab, -v is just verbose and lets you know if something went wrong)
+
+It's is probably going to be owned by root, to fix this you can do sudo chown -R deck /path/to/mount and ownership will be set to Deck. This should be persistent.
+
+Adding to Steam:
+Still in desktop mode, cannot do this in gamemode
+
+Exit Steam and start it up again
+
+Go to Settings > Downloads > Steam Library Folders
+
+Add new folder, it should detect the mounted USB (if it doesn't, verify that you are the owner by rightclicking in it in Dolphin and see if you can "create new", or rightclick the folder > properties > Permissions, or do ls -l /path/to/mount and restart Steam).
+
+Add the USB and you're done.
+
+If you have more USBs you want to mount to the same place, redo everything and copy the steamlibrary files from the original drive and it should work great (libraryfolder.vdf is very important) File structure should be a "SteamLibrary" folder in the USB's root which contains a "steamapps" folder and a "libraryfolder.vdf" file (sized at 69B)
+
+You could also tell Plasma to automount it when you attach it, this only goes for desktop mode however. If you added "defaults" in fstab, it should automount when you connect it in gamemode.
+
+Terminal tips:
+Add aliases to commands you might use a lot, simply add alias [alias]='[command here]' to your .bashrc (located in /Home) and either load it with source .bashrc or reboot. e.g alias mntusb='sudo mount -U [uuid] /path/to/mount'
+
+While in desktop mode, add "xterm" as a non-Steam game, this lets you use the terminal while in gamemode. Konsole does not work well unfortunately.
+
+Also good idea to add some keybinds in Steam Input so you can quickly clear the terminal and actually see what you're typing (ctrl+L).
+
+If the USB is not mounted when you enter gamemode, you have to do sudo mount -a in the terminal and then "restart Steam Client" and the new library should show up.
+
+Unmounting:
+sudo umount /path/to/mount -l should unmount any drive mounted to that path, for clean unmounting.
