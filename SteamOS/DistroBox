@@ -14,5 +14,6 @@ TO BASHRC:
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/podman/bin:$PATH
 
-distrobox create -i ubuntu:22.04
-distrobox enter ubuntu-22-04
+distrobox create ubuntu --image docker.io/library/ubuntu:22.04
+distrobox enter ubuntu
+
