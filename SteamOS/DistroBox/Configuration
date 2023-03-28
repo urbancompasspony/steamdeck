@@ -1,4 +1,15 @@
-The better way to have everything, even VM!
+# set password if not already done
+passwd
+
+# On Konsole
+sudo steamos-readonly disable 
+sudo pacman-key --init 
+sudo pacman-key --populate archlinux 
+sudo pacman -Sy 
+sudo pacman -S podman 
+sudo steamos-readonly enable
+
+# RE-DO THIS AT EVERY STEAMOS UPGRADE!
 
 On SteamOS Konsole:
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
@@ -8,16 +19,27 @@ TO BASHRC:
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/podman/bin:$PATH
 xhost +si:localuser:$USER
-sudo xhost +
+###sudo xhost +?
+
+# Setup subuid/subgid
+touch /etc/subuid
+touch /etc/subgid
+chmod 664 /etc/subuid /etc/subgid
+
+sudo usermod --add-subuids 10000-75535 deck 
+sudo usermod --add-subgids 10000-75535 deck
+
+For conflict edit /etc/containers/storage.conf:
+[storage.options.overlay] mountopt = "nodev"
+to:
+[storage.options.overlay] mountopt = "nodev,index=off"
 
 # For vanilla:
-distrobox create ubuntu --image docker.io/library/ubuntu:22.04 --root
+distrobox create ubuntu --image docker.io/library/ubuntu:22.04
 distrobox enter ubuntu
 
-# For QEMU KVM?
+# For QEMU KVM support?
 distrobox create ubuntu --volume /dev/kvm:/dev/kvm --image docker.io/library/ubuntu:22.04 --root
-
-Inside Distrobox System:
 
 Check Situation:
 virt-host-validate
