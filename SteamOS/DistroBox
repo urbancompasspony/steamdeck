@@ -11,9 +11,11 @@ sudo steamos-readonly enable
 
 # RE-DO THIS AT EVERY STEAMOS UPGRADE!
 
+# For External Use:
+mkdir /run/media/mmcblk0p1/DistroBox
+
 On SteamOS Konsole:
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/extras/install-podman | sh -s -- --prefix ~/.local
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix /run/media/mmcblk0p1/DistroBox
 
 TO BASHRC:
 export PATH=$HOME/.local/bin:$PATH
