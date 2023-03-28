@@ -18,15 +18,16 @@ On SteamOS Konsole:
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix /run/media/mmcblk0p1/DistroBox
 
 TO BASHRC:
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.local/podman/bin:$PATH
-xhost +si:localuser:$USER
+[ -d /run/media/mmcblk0p1/DistroBox ] && {
+  export PATH=/run/media/mmcblk0p1/DistroBox/bin:$PATH
+  xhost +si:localuser:$USER
+  }
 ###sudo xhost +?
 
 # Setup subuid/subgid
-touch /etc/subuid
-touch /etc/subgid
-chmod 664 /etc/subuid /etc/subgid
+sudo touch /etc/subuid
+sudo touch /etc/subgid
+sudo chmod 664 /etc/subuid /etc/subgid
 
 sudo usermod --add-subuids 10000-75535 deck 
 sudo usermod --add-subgids 10000-75535 deck
