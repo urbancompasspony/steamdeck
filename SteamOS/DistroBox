@@ -32,14 +32,10 @@ sudo chmod 664 /etc/subuid /etc/subgid
 sudo usermod --add-subuids 10000-75535 deck 
 sudo usermod --add-subgids 10000-75535 deck
 
-For conflict edit /etc/containers/storage.conf:
-[storage.options.overlay] mountopt = "nodev"
-to:
+Edit /etc/containers/storage.conf:
 [storage.options.overlay] mountopt = "nodev,index=off"
-and
-[storage] graphroot = "/var/lib/containers/storage"
-to:
 [storage] graphroot = "/run/media/mmcblk0p1/DistroBox/Volumes"
+[storage] runroot = "/run/media/mmcblk0p1/DistroBox/Storage"
 
 # For vanilla:
 distrobox create ubuntu --volume /run/media/mmcblk0p1/DistroBox/Volumes --image docker.io/library/ubuntu:22.04
