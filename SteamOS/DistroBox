@@ -6,7 +6,8 @@ sudo steamos-readonly disable
 sudo pacman-key --init 
 sudo pacman-key --populate archlinux 
 sudo pacman -Sy 
-sudo pacman -S podman 
+sudo pacman -S podman
+sudo pacman -S fuse-overlayfs
 sudo steamos-readonly enable
 
 # RE-DO THIS AT EVERY STEAMOS UPGRADE!
@@ -36,6 +37,7 @@ Edit /etc/containers/storage.conf:
 [storage.options.overlay] mountopt = "nodev,index=off"
 [storage] graphroot = "/run/media/mmcblk0p1/DistroBox/Volumes"
 [storage] runroot = "/run/media/mmcblk0p1/DistroBox/Storage"
+[storage.options.overlay] mount_program = "/usr/bin/fuse-overlayfs"
 
 # For vanilla:
 distrobox create ubuntu --volume /run/media/mmcblk0p1/DistroBox/Volumes --image docker.io/library/ubuntu:22.04 --root
