@@ -38,8 +38,8 @@ Edit /etc/containers/storage.conf:
 [storage] runroot = "/run/media/mmcblk0p1/DistroBox/Storage"
 
 # For vanilla:
-distrobox create ubuntu --volume /run/media/mmcblk0p1/DistroBox/Volumes --image docker.io/library/ubuntu:22.04
-distrobox enter ubuntu
+distrobox create ubuntu --volume /run/media/mmcblk0p1/DistroBox/Volumes --image docker.io/library/ubuntu:22.04 --root
+distrobox enter ubuntu --root
 
 # For QEMU KVM support?
 distrobox create ubuntu --volume /dev/kvm:/dev/kvm --image docker.io/library/ubuntu:22.04 --root
