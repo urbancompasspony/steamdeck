@@ -19,8 +19,8 @@ On SteamOS Konsole:
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix /run/media/mmcblk0p1/DistroBox
 
 TO BASHRC:
-[ -d /run/media/mmcblk0p1/DistroBox ] && {
-  export PATH=/run/media/mmcblk0p1/DistroBox/bin:$PATH
+[ -d /run/media/SDCard/DistroBox ] && {
+  export PATH=/run/media/SDCard/DistroBox/bin:$PATH
   xhost +si:localuser:$USER
   }
 
@@ -32,10 +32,10 @@ sudo chmod 664 /etc/subuid /etc/subgid
 sudo usermod --add-subuids 10000-75535 deck 
 sudo usermod --add-subgids 10000-75535 deck
 
-Edit /etc/containers/storage.conf:
+Edit /etc/containers/storage.conf and change these lines:
 [storage]
-graphroot = "/run/media/mmcblk0p1/DistroBox/Volumes"
-runroot = "/run/media/mmcblk0p1/DistroBox/Storage"
+graphroot = "/run/media/SDCard/DistroBox/Volumes"
+runroot = "/run/media/SDCard/DistroBox/Storage"
 [storage.options.overlay]
 mount_program = "/usr/bin/fuse-overlayfs"
 mountopt = "nodev,index=off"
