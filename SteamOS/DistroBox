@@ -1,18 +1,20 @@
 The better way to have everything, even VM!
 
 On SteamOS Konsole:
-
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/extras/install-podman | sh -s -- --prefix ~/.local
-xhost +si:localuser:$USER
 
+TO BASHRC:
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/podman/bin:$PATH
+xhost +si:localuser:$USER
 
-distrobox create ubuntu --image docker.io/library/ubuntu:22.04
+# For vanilla:
+distrobox create ubuntu --image docker.io/library/ubuntu:22.04 --root
 distrobox enter ubuntu
 
-distrobox create ubuntu --volume /dev/kvm:/dev/kvm --image docker.io/library/ubuntu:22.04
+# For QEMU KVM?
+distrobox create ubuntu --volume /dev/kvm:/dev/kvm --image docker.io/library/ubuntu:22.04 --root
 
 Inside Distrobox System:
 
