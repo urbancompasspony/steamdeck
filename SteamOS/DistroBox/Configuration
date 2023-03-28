@@ -33,9 +33,11 @@ sudo usermod --add-subuids 10000-75535 deck
 sudo usermod --add-subgids 10000-75535 deck
 
 Edit /etc/containers/storage.conf:
-[storage.options.overlay] mountopt = "nodev,index=off"
-[storage] graphroot = "/run/media/mmcblk0p1/DistroBox/Volumes"
-[storage] runroot = "/run/media/mmcblk0p1/DistroBox/Storage"
-[storage.options.overlay] mount_program = "/usr/bin/fuse-overlayfs"
+[storage]
+graphroot = "/run/media/mmcblk0p1/DistroBox/Volumes"
+runroot = "/run/media/mmcblk0p1/DistroBox/Storage"
+[storage.options.overlay]
+mount_program = "/usr/bin/fuse-overlayfs"
+mountopt = "nodev,index=off"
 
 That's all folks!
