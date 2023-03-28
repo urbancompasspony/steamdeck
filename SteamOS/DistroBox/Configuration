@@ -39,6 +39,4 @@ Edit /etc/containers/storage.conf:
 [storage] runroot = "/run/media/mmcblk0p1/DistroBox/Storage"
 [storage.options.overlay] mount_program = "/usr/bin/fuse-overlayfs"
 
-# For vanilla:
-distrobox create ubuntu --image docker.io/library/ubuntu:22.04 --root
-distrobox enter ubuntu --root
+That's all folks!
