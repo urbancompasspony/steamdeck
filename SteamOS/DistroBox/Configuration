@@ -23,7 +23,6 @@ TO BASHRC:
   export PATH=/run/media/mmcblk0p1/DistroBox/bin:$PATH
   xhost +si:localuser:$USER
   }
-###sudo xhost +?
 
 # Setup subuid/subgid
 sudo touch /etc/subuid
