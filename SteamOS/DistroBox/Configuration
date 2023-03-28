@@ -40,16 +40,5 @@ Edit /etc/containers/storage.conf:
 [storage.options.overlay] mount_program = "/usr/bin/fuse-overlayfs"
 
 # For vanilla:
-distrobox create ubuntu --volume /run/media/mmcblk0p1/DistroBox/Volumes --image docker.io/library/ubuntu:22.04 --root
+distrobox create ubuntu --image docker.io/library/ubuntu:22.04 --root
 distrobox enter ubuntu --root
-
-# For QEMU KVM support?
-distrobox create ubuntu --volume /dev/kvm:/dev/kvm --image docker.io/library/ubuntu:22.04 --root
-
-Check Situation:
-virt-host-validate
-
-sudo apt install qemu qemu-kvm qemu-system qemu-guest-agent libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf dnsmasq docker.io
-sudo service dbus start
-libvirtd -d
-virt-manager
