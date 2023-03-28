@@ -8,6 +8,7 @@ TO BASHRC:
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/podman/bin:$PATH
 xhost +si:localuser:$USER
+sudo xhost +
 
 # For vanilla:
 distrobox create ubuntu --image docker.io/library/ubuntu:22.04 --root
