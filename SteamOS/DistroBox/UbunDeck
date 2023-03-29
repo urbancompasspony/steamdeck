@@ -42,4 +42,7 @@ graphroot = "/run/media/deck/UbunDeck/Volume"
 mount_program = "/usr/bin/fuse-overlayfs"
 mountopt = "nodev,index=off"
 
+# Create container as:
+distrobox create ubuntu --image docker.io/library/ubuntu:22.04 --root
+
 That's all folks!
