@@ -22,6 +22,7 @@ curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -
 TO BASHRC:
 export PATH=$HOME/.local/Distrobox/bin:$PATH
 xhost +si:localuser:$USER 1> /dev/null
+
 . .bashrc
 
 # Setup subuid/subgid
