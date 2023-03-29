@@ -36,8 +36,8 @@ sudo usermod --add-subgids 10000-75535 deck
 sudo nano /etc/containers/storage.conf
 
 [storage]
-graphroot = "/home/deck/.local/Distrobox/Volumes"
-runroot = "/home/deck/.local/Distrobox/Storage"
+runroot = "/run/media/deck/UbunDeck/Storage"
+graphroot = "/run/media/deck/UbunDeck/Volume"
 [storage.options.overlay]
 mount_program = "/usr/bin/fuse-overlayfs"
 mountopt = "nodev,index=off"
