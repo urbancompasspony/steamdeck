@@ -13,14 +13,15 @@ sudo steamos-readonly enable
 # RE-DO THIS AT EVERY STEAMOS UPGRADE!
 
 # For External Use:
-mkdir -p /run/media/mmcblk0p1/DistroBox/Volumes
+mkdir -p $HOME/.local/Distrobox/Volumes
+mkdir -p $HOME/.local/Distrobox/Storage
 
 On SteamOS Konsole:
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix /run/media/mmcblk0p1/DistroBox
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix $HOME/.local/Distrobox
 
 TO BASHRC:
-export PATH=$HOME/.local/bin:$PATH
-xhost +si:localuser:$USER
+export PATH=$HOME/.local/Distrobox/bin:$PATH
+xhost +si:localuser:$USER 1> /dev/null
 
 # Setup subuid/subgid
 sudo touch /etc/subuid
@@ -30,10 +31,11 @@ sudo chmod 664 /etc/subuid /etc/subgid
 sudo usermod --add-subuids 10000-75535 deck 
 sudo usermod --add-subgids 10000-75535 deck
 
-Edit /etc/containers/storage.conf and change these lines:
+sudo nano /etc/containers/storage.conf
+
 [storage]
-graphroot = "/run/media/SDCard/DistroBox/Volumes"
-runroot = "/run/media/SDCard/DistroBox/Storage"
+graphroot = "/home/deck/.local/Distrobox/Volumes"
+runroot = "/home/deck/.local/Distrobox/Storage"
 [storage.options.overlay]
 mount_program = "/usr/bin/fuse-overlayfs"
 mountopt = "nodev,index=off"
