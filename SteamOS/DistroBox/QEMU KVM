@@ -1,6 +1,8 @@
 
 # Inside container do:
 sudo apt install qemu qemu-kvm qemu-system qemu-guest-agent libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf dnsmasq
+sudo setfacl -m user:$USER:rw /run/libvirt/virtlogd-sock
+
 sudo service dbus start
 sudo libvirtd -d
 virt-manager
