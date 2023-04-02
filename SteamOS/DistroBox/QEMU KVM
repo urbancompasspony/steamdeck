@@ -10,5 +10,4 @@ sudo usermod -aG libvirt-qemu deck
 sudo service dbus start
 sudo libvirtd -d
 sudo virtlogd -d
-
 virt-manager
