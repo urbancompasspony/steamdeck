@@ -9,6 +9,8 @@ sudo setfacl -m user:$USER:rw /run/libvirt
 sudo usermod -aG libvirt deck
 sudo usermod -aG libvirt-qemu deck
 
+exit
+
 sudo service dbus start
 sudo libvirtd -d
 sudo virtlogd -d
