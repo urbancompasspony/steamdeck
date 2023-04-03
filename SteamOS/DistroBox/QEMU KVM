@@ -10,7 +10,13 @@ sudo apt install qemu qemu-kvm qemu-system qemu-guest-agent libvirt-clients libv
 sudo service dbus start
 libvirtd -d
 sudo libvirtd -d
+virtlogd -d
+sudo virtlogd -d
+
 virt-manager
+
+
+
 
 
 NOTUSED
