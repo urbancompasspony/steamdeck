@@ -39,5 +39,6 @@ To force shutdown:
 virsh destroy VMNAME
 
 Remove all:
+virsh undefine VMNAME
 virsh undefine VMNAME --remove-all-storage
 
