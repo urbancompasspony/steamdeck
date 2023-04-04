@@ -12,18 +12,32 @@ sudo libvirtd -d
 virtlogd -d
 sudo virtlogd -d
 
-virt-manager
+#!/bin/bash
+virt-install \
+-n W10Pro \
+--description "W10Pro" \
+--os-variant=win10 \
+--ram=4096 \
+--vcpus=4 \
+--disk path=/run/media/deck/SSDock/1_VMs/w11.img,bus=virtio,size=60,format=raw \
+--boot cdrom,hd \
+--graphics vnc,listen=0.0.0.0 \
+--cdrom /run/media/deck/SSDock/0_ISOs/Windows11.iso \
+--network default \
+--check all=off
 
+Access with:
+virt-viewer
 
+Check all VMs:
+virsh list --all
 
+Start or Stop:
+virsh shutdown VMNAME
+virsh start VMNAME
+To force shutdown:
+virsh destroy VMNAME
 
+Remove all:
+virsh undefine VMNAME --remove-all-storage
 
-NOTUSED
-
-sudo mkdir /run/libvirt
-sudo setfacl -m user:$USER:rw /run/libvirt
-sudo usermod -aG libvirt deck
-sudo usermod -aG libvirt-qemu deck
-exit
-sudo chmod 777 -R /var/run/libvirt
-virtlogd -d
