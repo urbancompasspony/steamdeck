@@ -18,5 +18,3 @@ More Add-ons to System:
 
 * [CryoUtilities](https://github.com/CryoByte33/steam-deck-utilities)
 For release more power with safe tweaks of system
-* [SteamDeck Repo Manager](https://github.com/CapitaineJSparrow/steam-repo-manager)
-To change the boot animation for free
