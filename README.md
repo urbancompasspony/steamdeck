@@ -1,2 +1,8 @@
 # steamdeck
-Some scripts for workarounds
+Some scripts and workarounds
+
+# Must-Haves:
+
+* 
+* 
+* 
