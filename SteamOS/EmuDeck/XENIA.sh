@@ -16,10 +16,10 @@ APPIDPY="/run/media/deck/SteamDeck/Emulation/tools/appID.py"
 PROTONLAUNCH="/run/media/deck/SteamDeck/Emulation/tools/proton-launch.sh"
 
 # Cemu.exe location
-xenia="/run/media/deck/SteamDeck/Emulation/tools/launchers/xenia_canary.exe"
+xenia="/run/media/deck/SteamDeck/Emulation/tools/launchers/xeniasteamos/xenia_canary.exe"
 
 # APPID
 APPID=$( /usr/bin/python "${APPIDPY}" "${EXE}" "${NAME}" )
 
 # Call the Proton launcher script and give the arguments
-"${PROTONLAUNCH}" -p '- Experimental' -i "${APPID}" -- "${xenia}" "Z:/run/media/deck/SteamDeck/Emulation/roms/xbox360/Red Dead Redemption.iso"
+"${PROTONLAUNCH}" -p '- Experimental' -i "${APPID}" -- "${xenia}" "${@}"
