@@ -1,4 +1,4 @@
-# For God of War I, II, Chains of Olympus and Ghost of Sparta:
+# For God of War Collection and God of War Origins Collection:
 
 Keep the default configurations.
 
