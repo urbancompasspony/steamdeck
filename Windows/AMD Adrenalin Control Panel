@@ -1,0 +1,18 @@
+> Install the official Valve's Windows GPU Drivers;
+Then install AMD GPU Drivers from Minimal AutoDetect Tools.
+
+Download:
+
+https://www.amd.com/en/support/graphics/amd-radeon-rx-6000-series/amd-radeon-rx-6900-series/amd-radeon-rx-6950-xt
+
+and execute the driver install as usual until you get the "Oops! Something went wrong" message saying no AMD graphics hardware was detected.
+Now go to where you unpacked the drivers (C:\AMD by default) and browse to (for the current release) 
+
+C:\AMD\Non-WHQL-Radeon-Software-Adrenalin-2020-22.2.3-Win10-Win11-64Bit-Feb24\Packages\Drivers\Display\WT6A_INF\B376966. 
+
+In there you'll see ccc2_install.exe, that's the settings app installer. Copy ccc2_install.exe to your Deck and run it there. 
+After installing it you'll probably also have to install the C++ 2019 x64 redistributable manually, 
+it should be in C:\AMD\WU-CCC2\ccc2_install\VC17RTx64 on your Deck after ccc2_install unpacks.
+
+This method has the benefit of showing AMD Settings and its version in the Control Panel Programs and Features app, 
+and it can be uninstalled from there if needed.
