@@ -1,0 +1,21 @@
+# auto-login
+sudo groupadd -r autologin
+sudo gpasswd -a username autologin
+sudo nano /etc/lightdm/lightdm.conf
+
+SEARCH and edit!
+
+autologin-guest=false
+autologin-user=MY_USER
+autologin-user-timeout=0
+
+There is the correct [parameter] to respect.
+
+# Set DPI to
+122
+
+# Set auto-start for
+STEAM
+DISPLAY (script! do not use CRON)
+
+# Audio OK
