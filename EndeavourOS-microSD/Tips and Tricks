@@ -14,6 +14,9 @@ There is the correct [parameter] to respect.
 # Set DPI to
 122
 
+# Set DESKTOP BARS to 32!
+Up and Down.
+
 # Set auto-start for
 STEAM
 DISPLAY (script! do not use CRON)
