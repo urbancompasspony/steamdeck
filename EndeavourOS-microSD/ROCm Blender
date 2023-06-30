@@ -1,3 +1,4 @@
 # To enable HIP Render on Blender!
 
-sudo pacman -S rocm-hip-runtime rocm-opencl-runtime rocminfo
+sudo pacman -S rocm-hip-runtime rocm-opencl-runtime rocminfo opencl-headers opencl-mesa
+
