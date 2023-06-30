@@ -2,3 +2,9 @@
 
 sudo pacman -S rocm-hip-runtime rocm-opencl-runtime rocminfo opencl-headers opencl-mesa
 
+To apply temporary:
+export PATH=$PATH:/opt/rocm/hip/bin
+
+sudo nano /etc/profile
+append_path '/opt/rocm/hip/bin'
+reboot
