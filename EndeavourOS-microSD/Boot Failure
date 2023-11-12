@@ -1,0 +1,5 @@
+
+> Check if BIOS is ok!
+USB mode has to be XHCI and not DRD.
+
+Check if there is IOMMU ON and check the 4GB for Buffer VRAM.
