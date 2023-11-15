@@ -4,4 +4,5 @@ USB mode has to be XHCI and not DRD.
 
 Check if there is IOMMU ON and check the 4GB for Buffer VRAM.
 
+BOOT PENDRIVE ON STEAMDECK! And runs this as chroot:
 grub-install --efi-directory=/boot/efi
