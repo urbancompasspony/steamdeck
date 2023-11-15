@@ -4,5 +4,17 @@ USB mode has to be XHCI and not DRD.
 
 Check if there is IOMMU ON and check the 4GB for Buffer VRAM.
 
-BOOT PENDRIVE ON STEAMDECK! And runs this as chroot:
+BOOT PENDRIVE LiveUSB ON STEAMDECK!
+
+Chroot:
+sudo mount /dev/sdX2 /mnt
+sudo mount /dev/sdX1 /mnt/boot/efi
+sudo arch-chroot /mnt
+
+And runs this as chroot:
 grub-install --efi-directory=/boot/efi
+
+If needed more complex commands:
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=endeavouros --modules="tpm" --disable-shim-lock
+grub-mkconfig -o /boot/grub/grub.cfg
+dracut-rebuild
