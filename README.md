@@ -1,6 +1,10 @@
 # steamdeck
 Some scripts and workarounds
 
+# Tip
+
+EVERYTIME SteamDeck upgrades its firmware, you MUST re-run chroot and reinstall grub!
+
 # Must-Haves:
 
 * [Decky Loader](https://deckbrew.xyz/)
