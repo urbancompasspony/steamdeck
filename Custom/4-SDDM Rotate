@@ -1,7 +1,5 @@
 sudo nano /etc/sddm.conf.d/10-endeavouros.conf
 
-Add bellow [THEME]
-
 [Wayland]
 DisplayCommand=/usr/share/sddm/scripts/Xsetup
 
