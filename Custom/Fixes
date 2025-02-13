@@ -8,8 +8,8 @@ sudo nano /etc/sddm.conf
 Session=steam
 
 Edit launch file:
+/usr/bin/gamescope-session
 From this:
-
-#totry
-#To this:
-#-f --force-grab-cursor
+gamescope --mangoapp -e -- steam -steamdeck -steamos3
+To this:
+gamescope -f --force-grab-cursor --mangoapp -e -- steam -steamdeck -steamos3
