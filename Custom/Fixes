@@ -1,15 +1,11 @@
-
+# Brightness:
 sudo usermod -a -G video <your-user-name>
-
 sudo nano /etc/udev/rules.d/backlight.rules
 ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"
 
+# AutoSession:
 sudo nano /etc/sddm.conf
 Session=steam
 
-Edit launch file:
-/usr/bin/gamescope-session
-From this:
-gamescope --mangoapp -e -- steam -steamdeck -steamos3
-To this:
-gamescope -f --force-grab-cursor --mangoapp -e -- steam -steamdeck -steamos3
+# Bluetooth:
+sudo systemctl enable --now bluetooth.service
