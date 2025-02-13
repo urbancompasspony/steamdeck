@@ -7,3 +7,5 @@ sudo rsync -va usr/ /usr/
 
 sudo nano /etc/ananicy.d/gamescope.rules
 {"name": "gamescope", "nice": -20}
+
+sudo systemctl enable --now ananicy-cpp.service
