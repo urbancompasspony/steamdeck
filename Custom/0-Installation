@@ -10,6 +10,8 @@ Set BTRFS with Swap on File
 
 sudo pacman -S discover flatpak fwupd packagekit-qt6 flatpak-kcm packagekit-qt5
 
+sudo pacman -S rocm-hip-runtime rocm-opencl-runtime rocminfo opencl-headers opencl-clhpp radeontop
+
 sudo nano /efi/loader/loader.conf
 timeout 5
 change to
