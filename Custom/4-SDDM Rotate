@@ -1,3 +1,8 @@
+sudo nano /etc/sddm.conf.d/virtualkbd.conf
+
+[General]
+InputMethod=qtvirtualkeyboard
+
 sudo nano /etc/sddm.conf.d/10-endeavouros.conf
 
 [Wayland]
