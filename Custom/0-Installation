@@ -4,7 +4,10 @@ EndeavourOS
 Set SystemD-Boot
 Set BTRFS with Swap on File
 
-echo "timeout 0" | sudo tee /boot/efi/loader/loader.conf
+sudo nano /efi/loader/loader.conf
+timeout 5
+change to
+timeout 0
 
 sudo nano /etc/kernel/cmdline
 ADD: mitigations=off
