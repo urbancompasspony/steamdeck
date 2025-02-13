@@ -1,0 +1,18 @@
+sudo nano /etc/sddm.conf.d/10-endeavouros.conf
+
+Add bellow [THEME]
+
+[X11]
+DisplayCommand=/usr/share/sddm/scripts/Xsetup
+
+[Wayland]
+DisplayCommand=/usr/share/sddm/scripts/Xsetup
+
+[XDisplay]
+DisplayCommand=/usr/share/sddm/scripts/Xsetup
+
+Then:
+sudo nano /usr/share/sddm/scripts/Xsetup
+
+#!/bin/sh
+xrandr --output eDP-1 --rotate right
