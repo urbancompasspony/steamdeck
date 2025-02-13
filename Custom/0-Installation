@@ -1,0 +1,11 @@
+
+EndeavourOS
+
+Set SystemD-Boot
+Set BTRFS with Swap on File
+
+echo "timeout 0" | sudo tee /boot/efi/loader/loader.conf
+
+sudo nano /etc/kernel/cmdline
+ADD: mitigations=off
+sudo reinstall-kernels
