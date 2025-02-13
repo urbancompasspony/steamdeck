@@ -1,6 +1,10 @@
 
 EndeavourOS
 
+sudo reflector --protocol https --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo eos-rankmirrors --verbose
+yay -Syyu
+
 Set SystemD-Boot
 Set BTRFS with Swap on File
 
