@@ -5,7 +5,7 @@ git clone https://github.com/shahnawazshahin/steam-using-gamescope-guide
 cd steam-using-gamescope-guide
 sudo rsync -va usr/ /usr/
 
-git clone https://github.com/ChimeraOS/gamescope-session-steam
-cd gamescope-session-steam
-sudo rsync -va usr/ /usr/
+#git clone https://github.com/ChimeraOS/gamescope-session-steam
+#cd gamescope-session-steam
+#sudo rsync -va usr/ /usr/
 
