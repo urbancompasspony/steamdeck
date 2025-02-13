@@ -4,6 +4,8 @@ EndeavourOS
 Set SystemD-Boot
 Set BTRFS with Swap on File
 
+sudo pacman -S discover flatpak fwupd packagekit-qt6 flatpak-kcm packagekit-qt5
+
 sudo nano /efi/loader/loader.conf
 timeout 5
 change to
@@ -12,3 +14,5 @@ timeout 0
 sudo nano /etc/kernel/cmdline
 ADD: mitigations=off
 sudo reinstall-kernels
+
+reboot
