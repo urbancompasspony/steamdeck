@@ -9,3 +9,5 @@ Session=steam
 
 # Bluetooth:
 sudo systemctl enable --now bluetooth.service
+
+Set: mitigations=off
