@@ -1,11 +1,9 @@
-sudo pacman -S gamescope
-sudo pacman -Syu mangohud lib32-mangohud
+
+sudo pacman -S gamescope mangohud lib32-mangohud ananicy-cpp
 
 git clone https://github.com/shahnawazshahin/steam-using-gamescope-guide
 cd steam-using-gamescope-guide
 sudo rsync -va usr/ /usr/
 
-sudo systemctl enable --now bluetooth
-
-???
-sudo setcap 'CAP_SYS_NICE=eip' /usr/bin/gamescope
+sudo nano /etc/ananicy.d/gamescope.rules
+{"name": "gamescope", "nice": -20}
