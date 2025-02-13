@@ -4,3 +4,6 @@ sudo pacman -Syu mangohud lib32-mangohud
 git clone https://github.com/shahnawazshahin/steam-using-gamescope-guide
 cd steam-using-gamescope-guide
 sudo rsync -va usr/ /usr/
+
+???
+sudo setcap 'CAP_SYS_NICE=eip' /usr/bin/gamescope
