@@ -5,9 +5,9 @@ Add bellow [THEME]
 [Wayland]
 DisplayCommand=/usr/share/sddm/scripts/Xsetup
 
-Then:
 sudo chmod +x /usr/share/sddm/scripts/Xsetup
 sudo nano /usr/share/sddm/scripts/Xsetup
 
 #!/bin/sh
 xrandr -o right
+xinput set-prop "FTS3528:00 2808:1015" --type=float "Coordinate Transformation Matrix" 0 1 0 -1 0 1 0 0 1
