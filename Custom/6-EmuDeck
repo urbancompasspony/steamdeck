@@ -1,4 +1,8 @@
 
-wget https://www.emudeck.com/EmuDeck.sh
-USE DESKTOP TO INSTALL!
+DO NOT USE EMUDECK!
 
+Get EmulationStation-DE.appimage
+
+Then install everything:
+
+yay -S duckstation-qt-bin rpcs3-latest-bin pcsx2-latest-bin snes9x
