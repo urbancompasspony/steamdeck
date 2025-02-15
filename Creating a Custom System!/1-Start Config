@@ -23,3 +23,7 @@ EmuDeck!
 sudo pacman -S zenity
 curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash
 
+Check if Emudeck is Ok checking BIOS and ISOSs.
+
+Install all the other packages from DEFAULT DESKTOP:
+https://github.com/urbancompasspony/linux.cheat.sheet/blob/main/EndeavourOS/Plasma/1.%20MUST
