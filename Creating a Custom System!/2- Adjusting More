@@ -14,4 +14,4 @@ sudo rsync -va usr/ /usr/
 sudo nano /etc/ananicy.d/gamescope.rules
 {"name": "gamescope", "nice": -20}
 
-sudo systemctl enable --now ananicy-cpp.service
+sudo systemctl enable --now ananicy-cpp.service; sudo systemctl enable --now sshd; sudo systemctl enable --now cronie; sudo systemctl enable --now docker; sudo systemctl enable --now libvirtd
