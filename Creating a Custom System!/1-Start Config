@@ -1,0 +1,25 @@
+EndeavourOS - Systemd-boot and BTRFS!
+
+First: sudo nano /etc/fstab and add:
+,discard=async,nodiratime
+To everything, but not SWAP SUBVOL and TempFS! Or you will see errors.
+Save. Reboot.
+
+sudo reflector --protocol https --verbose --latest 25 --sort rate --save /etc/pacman.d/mirrorlist
+sudo eos-rankmirrors --verbose
+yay -Syyu
+
+Discover Store:
+sudo pacman -S discover flatpak fwupd packagekit-qt6 flatpak-kcm packagekit-qt5
+
+Steam, GameScope and MangoHUD:
+sudo pacman -S steam gamescope mangohud lib32-mangohud ananicy-cpp
+Set 5 = VULKAN-RADEON!
+
+ROCm:
+sudo pacman -S rocm-hip-runtime rocm-opencl-runtime rocminfo opencl-headers opencl-clhpp radeontop
+
+EmuDeck!
+sudo pacman -S zenity
+curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash
+
