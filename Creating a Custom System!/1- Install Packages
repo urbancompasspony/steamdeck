@@ -12,20 +12,20 @@ yay -Syyu
 Discover Store:
 sudo pacman -S discover flatpak fwupd packagekit-qt6 flatpak-kcm packagekit-qt5
 
-Steam, GameScope and MangoHUD:
+Steam, GameScope, MangoHUD and Ananicy:
 sudo pacman -S steam gamescope mangohud lib32-mangohud ananicy-cpp
-Set 5 = VULKAN-RADEON!
+Choose 5 = VULKAN-RADEON!
 
 ROCm:
 sudo pacman -S rocm-hip-runtime rocm-opencl-runtime rocminfo opencl-headers opencl-clhpp radeontop
 
-EmuDeck!
+EmuDeck!?
 sudo pacman -S zenity
 curl -L https://raw.githubusercontent.com/dragoonDorise/EmuDeck/main/install.sh | bash
 
 Check if Emudeck is Ok checking BIOS and ISOSs.
 
-Install all the other packages from DEFAULT DESKTOP:
+Install all the other packages for a DEFAULT DESKTOP:
 https://github.com/urbancompasspony/linux.cheat.sheet/blob/main/EndeavourOS/Plasma/1.%20MUST
 
 # Default BASH
