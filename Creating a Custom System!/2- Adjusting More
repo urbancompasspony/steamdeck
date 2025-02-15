@@ -1,0 +1,17 @@
+
+sudo nano /etc/kernel/cmdline
+mitigations=off
+
+sudo nano /efi/loader/loader.conf
+timeout 5 change to timeout 0
+
+sudo reinstall-kernels
+
+git clone https://github.com/shahnawazshahin/steam-using-gamescope-guide
+cd steam-using-gamescope-guide
+sudo rsync -va usr/ /usr/
+
+sudo nano /etc/ananicy.d/gamescope.rules
+{"name": "gamescope", "nice": -20}
+
+sudo systemctl enable --now ananicy-cpp.service

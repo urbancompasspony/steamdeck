@@ -1,8 +1,0 @@
-
-sudo nano /etc/kernel/cmdline
-mitigations=off
-
-sudo nano /efi/loader/loader.conf
-timeout 5 change to timeout 0
-
-sudo reinstall-kernels
