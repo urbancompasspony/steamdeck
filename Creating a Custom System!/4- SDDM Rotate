@@ -1,3 +1,8 @@
+sudo nano /etc/sddm.conf
+Session=plasma
+to
+Session=steam
+
 sudo nano /etc/sddm.conf.d/virtualkbd.conf
 
 [General]
