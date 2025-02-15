@@ -12,6 +12,8 @@ cd steam-using-gamescope-guide
 sudo rsync -va usr/ /usr/
 
 sudo usermod -a -G video ztge
+sudo usermod -a -G libvirt ztge
+sudo usermod -a -G libvirt-qemu ztge
 
 sudo nano /etc/udev/rules.d/backlight.rules
 ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"
