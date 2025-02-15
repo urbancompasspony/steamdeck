@@ -12,6 +12,8 @@ cd steam-using-gamescope-guide
 sudo rsync -va usr/ /usr/
 
 sudo usermod -a -G video ztge
+sudo usermod -a -G audio ztge
+
 sudo usermod -a -G libvirt ztge
 sudo usermod -a -G libvirt-qemu ztge
 
